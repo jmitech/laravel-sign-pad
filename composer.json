@@ -1,11 +1,11 @@
 {
-    "name": "creagia/laravel-sign-pad",
+    "name": "jmitech/laravel-sign-pad",
     "description": "Laravel package for of E-Signature with Signature Pad and Digital Certified Sign with TCPDF",
     "license": "MIT",
     "authors": [
         {
-            "name": "creagia",
-            "email": "info@creagia.com"
+            "name": "jmitech",
+            "email": "info@jmitechnologies.com"
         }
     ],
     "require": {
