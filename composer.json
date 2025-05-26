@@ -1,5 +1,5 @@
 {
-    "name": "jmitech/laravel-sign-pad",
+    "name": "jmitech/sign-pad",
     "description": "Laravel package for of E-Signature with Signature Pad and Digital Certified Sign with TCPDF",
     "license": "MIT",
     "authors": [
