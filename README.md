@@ -1,13 +1,13 @@
 # Laravel pad signature
 
-## Forked from [creagia/laravel-sign-pad](https://github.com/jmitech/laravel-sign-pad) (May 2025)
+## Forked from [creagia/laravel-sign-pad](https://github.com/creagia/laravel-sign-pad) (May 2025)
 
 A Laravel package to sign documents and optionally generate
  [certified PDFs](https://www.prepressure.com/pdf/basics/certified-pdf#:~:text=A%20Certified%20PDF%20is%20a,errors%20or%20notifications%20were%20generated) associated to a Eloquent model.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/jmitech/laravel-sign-pad.svg?style=flat-square)](https://packagist.org/packages/jmitech/laravel-sign-pad)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jmitech/laravel-sign-pad/run-tests.yml?label=tests)](https://github.com/jmitech/laravel-sign-pad/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/jmitech/laravel-sign-pad.svg?style=flat-square)](https://packagist.org/packages/jmitech/laravel-sign-pad)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/jmitech/sign-pad.svg?style=flat-square)](https://packagist.org/packages/jmitech/sign-pad)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/creagia/laravel-sign-pad/run-tests.yml?label=tests)](https://github.com/creagia/laravel-sign-pad/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/jmitech/sign-pad.svg?style=flat-square)](https://packagist.org/packages/jmitech/sign-pad)
 
 ## Requirements
 
@@ -18,7 +18,7 @@ Laravel pad signature requires **PHP 8.0 - 8.4** and **Laravel 8 - 12**.
 You can install the package via composer:
 
 ```bash
-composer require jmitech/laravel-sign-pad
+composer require jmitech/sign-pad
 ```
 
 Publish the config and the migration files and migrate the database
@@ -92,15 +92,58 @@ class MyModel extends Model implements CanBeSigned, ShouldGenerateSignatureDocum
             signaturePositions: [
                  new SignaturePosition(
                      signaturePage: 1,
-                     signatureX: 20,
+                     signatureX: 60,
                      signatureY: 25,
+                     signatureWidth: 500,
+                     signatureHeight: 150,
                  ),
                  new SignaturePosition(
-                     signaturePage: 2,
-                     signatureX: 25,
-                     signatureY: 50,
+                     signaturePage: 1,
+                     signatureX: 60,
+                     signatureY: 100,
                  ),
-            ]               
+            ],
+            textElements: [
+                new TextElement(
+                     page: 1,
+                     X: 10,
+                     Y: 30,
+                     text: 'My Text Element'
+                 ),
+                 new TextElement(
+                     page: 1,
+                     X: 10,
+                     Y: 60,
+                     text: 'My Bold and Red Big Text Element',
+                     size: 16,
+                     color: 'red',
+                     style: 'B', // bold
+                 ),
+                 new TextElement(
+                     page: 1,
+                     X: 10,
+                     Y: 90,
+                     text: 'My purple Text Element using hex color',
+                     color: '#800080',
+                 )
+            ],
+            dateElements: [
+                new DateElement(
+                     page: 1,
+                     X: 40,
+                     Y: 110,
+                     dateFormat: 'Y-m-d H:i:s',
+                 ),
+                 new DateElement(
+                     page: 1,
+                     X: 40,
+                     Y: 140,
+                     dateFormat: 'Y-m-d',
+                     size: 8,
+                     color: 'blue',
+                     style: 'I', // italic
+                 )
+            ],
         );
     }
 }

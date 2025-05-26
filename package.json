@@ -1,6 +1,6 @@
 {
-  "name": "laravel-sign-pad",
-  "version": "1.0.0",
+  "name": "sign-pad",
+  "version": "0.1.0",
   "description": "Laravel package for of E-Signature with Signature Pad and Digital Certified Sign with TCPDF",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jmitech/laravel-sign-pad.git"
+    "url": "git+https://github.com/jmitech/sign-pad.git"
   },
   "keywords": [
     "laravel",
@@ -19,9 +19,9 @@
   "author": "Creagia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jmitech/laravel-sign-pad/issues"
+    "url": "https://github.com/jmitech/sign-pad/issues"
   },
-  "homepage": "https://github.com/jmitech/laravel-sign-pad#readme",
+  "homepage": "https://github.com/jmitech/sign-pad#readme",
   "dependencies": {
     "signature_pad": "^4.0.0"
   },

@@ -34,8 +34,8 @@ class InstallCommand extends Command
             $this->call('migrate');
         }
 
-        if ($this->confirm('Would you like to star our repo on GitHub?')) {
-            $repoUrl = 'https://github.com/jmitech/laravel-sign-pad';
+        if ($this->confirm('Would you like to star original author (Creagia) on GitHub?')) {
+            $repoUrl = 'https://github.com/creagia/laravel-sign-pad';
 
             if (PHP_OS_FAMILY == 'Darwin') {
                 exec("open {$repoUrl}");
