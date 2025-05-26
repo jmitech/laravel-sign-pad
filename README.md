@@ -1,5 +1,7 @@
 # Laravel pad signature
 
+## Forked from [creagia/laravel-sign-pad](https://github.com/jmitech/laravel-sign-pad) (May 2025)
+
 A Laravel package to sign documents and optionally generate
  [certified PDFs](https://www.prepressure.com/pdf/basics/certified-pdf#:~:text=A%20Certified%20PDF%20is%20a,errors%20or%20notifications%20were%20generated) associated to a Eloquent model.
 
