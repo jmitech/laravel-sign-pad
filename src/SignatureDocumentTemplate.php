@@ -13,5 +13,7 @@ class SignatureDocumentTemplate
         public string $outputPdfPrefix,
         public DocumentTemplate $template,
         public array $signaturePositions = [],
+        public array $textElements = [],
+        public array $dateElements = [],
     ) {}
 }

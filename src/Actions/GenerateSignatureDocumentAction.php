@@ -28,6 +28,10 @@ class GenerateSignatureDocumentAction
 
         $this->pdf = $signatureDocumentTemplate->template->appendSignature($this->pdf, $decodedImage, $signatureDocumentTemplate);
 
+        $this->pdf = $signatureDocumentTemplate->template->appendText($this->pdf, $signatureDocumentTemplate);
+
+        $this->pdf = $signatureDocumentTemplate->template->appendDate($this->pdf, $signatureDocumentTemplate);
+
         $destinationFilename = "{$signatureDocumentTemplate->outputPdfPrefix}-{$signature->uuid}.pdf";
         $filePath = config('sign-pad.documents_path').'/'.$destinationFilename;
 

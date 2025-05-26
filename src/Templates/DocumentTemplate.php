@@ -7,6 +7,8 @@ use Creagia\LaravelSignPad\Actions\CertifyDocumentAction;
 use Creagia\LaravelSignPad\Signature;
 use Creagia\LaravelSignPad\SignatureDocumentTemplate;
 use setasign\Fpdi\Tcpdf\Fpdi;
+use Creagia\LaravelSignPad\Actions\AppendTextDocumentAction;
+use Creagia\LaravelSignPad\Actions\AppendDateDocumentAction;
 
 abstract class DocumentTemplate
 {
@@ -27,5 +29,15 @@ abstract class DocumentTemplate
     public function appendSignature(Fpdi $pdf, string $decodedImage, SignatureDocumentTemplate $signatureDocumentTemplate): Fpdi
     {
         return app(AppendSignatureDocumentAction::class)($pdf, $decodedImage, $signatureDocumentTemplate);
+    }
+
+    public function appendText(Fpdi $pdf, SignatureDocumentTemplate $signatureDocumentTemplate): Fpdi
+    {
+        return app(AppendTextDocumentAction::class)($pdf, $signatureDocumentTemplate);
+    }
+
+    public function appendDate(Fpdi $pdf, SignatureDocumentTemplate $signatureDocumentTemplate): Fpdi
+    {
+        return app(AppendDateDocumentAction::class)($pdf, $signatureDocumentTemplate);
     }
 }

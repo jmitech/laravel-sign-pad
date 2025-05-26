@@ -8,5 +8,7 @@ class SignaturePosition
         public int $signaturePage,
         public int $signatureX,
         public int $signatureY,
+        public int $signatureWidth,
+        public int $signatureHeight,
     ) {}
 }

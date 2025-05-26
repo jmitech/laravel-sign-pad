@@ -2,6 +2,7 @@
 
 namespace Creagia\LaravelSignPad\Actions;
 
+use App\Models\SignatureTemplate;
 use Creagia\LaravelSignPad\Exceptions\InvalidConfiguration;
 use Creagia\LaravelSignPad\SignatureDocumentTemplate;
 use Exception;
@@ -15,17 +16,17 @@ class AppendSignatureDocumentAction
      */
     public function __invoke(Fpdi $pdf, string $decodedImage, SignatureDocumentTemplate $signatureTemplate): Fpdi
     {
-        $this->validateConfig();
+        $this->validateConfig($signatureTemplate);
 
         foreach ($signatureTemplate->signaturePositions as $signaturePosition) {
             $pdf->setPage($signaturePosition->signaturePage);
 
             $pdf->Image(
-                '@'.$decodedImage,
+                '@' . $decodedImage,
                 $signaturePosition->signatureX,
                 $signaturePosition->signatureY,
-                config('sign-pad.width') * 0.26458333 / 2,
-                config('sign-pad.height') * 0.26458333 / 2,
+                $signaturePosition->signatureWidth * 0.26458333 / 2,
+                $signaturePosition->signatureHeight * 0.26458333 / 2,
                 'PNG'
             );
 
@@ -34,8 +35,8 @@ class AppendSignatureDocumentAction
                 $pdf->setSignatureAppearance(
                     $signaturePosition->signatureX,
                     $signaturePosition->signatureY,
-                    config('sign-pad.width') * 0.26458333 / 2,
-                    config('sign-pad.height') * 0.26458333 / 2,
+                    $signaturePosition->signatureWidth * 0.26458333 / 2,
+                    $signaturePosition->signatureHeight * 0.26458333 / 2,
                 );
             }
         }
@@ -43,13 +44,18 @@ class AppendSignatureDocumentAction
         return $pdf;
     }
 
-    private function validateConfig(): void
+    private function validateConfig(SignatureDocumentTemplate $signatureTemplate): void
     {
-        if (! is_numeric(config('sign-pad.width'))) {
-            throw new InvalidConfiguration("Invalid sign pad width. Check your config key 'sign-pad.width'");
-        }
-        if (! is_numeric(config('sign-pad.height'))) {
-            throw new InvalidConfiguration("Invalid sign pad height. Check your config key 'sign-pad.height'");
+        foreach ($signatureTemplate->signaturePositions as $signaturePosition) {
+            if (! is_numeric($signaturePosition->signaturePage)) {
+                throw new InvalidConfiguration("Invalid sign pad page. Check your SignatureTemplate object");
+            }
+            if (! is_numeric($signaturePosition->signatureX)) {
+                throw new InvalidConfiguration("Invalid sign pad X position. Check your SignatureTemplate object");
+            }
+            if (! is_numeric($signaturePosition->signatureY)) {
+                throw new InvalidConfiguration("Invalid sign pad Y position. Check your SignatureTemplate object");
+            }
         }
 
         if (! is_bool(config('sign-pad.certify_documents'))) {
