@@ -1,14 +1,14 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Templates;
+namespace Jmitech\LaravelSignPad\Templates;
 
-use Creagia\LaravelSignPad\Actions\AppendSignatureDocumentAction;
-use Creagia\LaravelSignPad\Actions\CertifyDocumentAction;
-use Creagia\LaravelSignPad\Signature;
-use Creagia\LaravelSignPad\SignatureDocumentTemplate;
+use Jmitech\LaravelSignPad\Actions\AppendSignatureDocumentAction;
+use Jmitech\LaravelSignPad\Actions\CertifyDocumentAction;
+use Jmitech\LaravelSignPad\Signature;
+use Jmitech\LaravelSignPad\SignatureDocumentTemplate;
 use setasign\Fpdi\Tcpdf\Fpdi;
-use Creagia\LaravelSignPad\Actions\AppendTextDocumentAction;
-use Creagia\LaravelSignPad\Actions\AppendDateDocumentAction;
+use Jmitech\LaravelSignPad\Actions\AppendTextDocumentAction;
+use Jmitech\LaravelSignPad\Actions\AppendDateDocumentAction;
 
 abstract class DocumentTemplate
 {

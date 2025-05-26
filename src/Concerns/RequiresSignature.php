@@ -1,8 +1,8 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Concerns;
+namespace Jmitech\LaravelSignPad\Concerns;
 
-use Creagia\LaravelSignPad\Signature;
+use Jmitech\LaravelSignPad\Signature;
 
 trait RequiresSignature
 {

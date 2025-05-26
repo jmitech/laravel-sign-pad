@@ -1,10 +1,10 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Traits;
+namespace Jmitech\LaravelSignPad\Traits;
 
 use setasign\Fpdi\Tcpdf\Fpdi;
-use Creagia\LaravelSignPad\DateElement;
-use Creagia\LaravelSignPad\TextElement;
+use Jmitech\LaravelSignPad\DateElement;
+use Jmitech\LaravelSignPad\TextElement;
 
 trait PdfElementStyle
 {

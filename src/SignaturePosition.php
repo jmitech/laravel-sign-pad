@@ -1,6 +1,6 @@
 <?php
 
-namespace Creagia\LaravelSignPad;
+namespace Jmitech\LaravelSignPad;
 
 class SignaturePosition
 {

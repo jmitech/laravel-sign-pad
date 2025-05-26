@@ -1,6 +1,6 @@
 <?php
 
-namespace Creagia\LaravelSignPad;
+namespace Jmitech\LaravelSignPad;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;

@@ -1,13 +1,13 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Actions;
+namespace Jmitech\LaravelSignPad\Actions;
 
 use Exception;
-use Creagia\LaravelSignPad\TextElement;
-use Creagia\LaravelSignPad\DateElement;
-use Creagia\LaravelSignPad\Traits\PdfElementStyle;
-use Creagia\LaravelSignPad\SignatureDocumentTemplate;
-use Creagia\LaravelSignPad\Exceptions\InvalidConfiguration;
+use Jmitech\LaravelSignPad\TextElement;
+use Jmitech\LaravelSignPad\DateElement;
+use Jmitech\LaravelSignPad\Traits\PdfElementStyle;
+use Jmitech\LaravelSignPad\SignatureDocumentTemplate;
+use Jmitech\LaravelSignPad\Exceptions\InvalidConfiguration;
 
 class AppendDateDocumentAction extends AppendTextDocumentAction
 {

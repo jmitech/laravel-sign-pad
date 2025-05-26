@@ -1,9 +1,9 @@
 <?php
 
-namespace Creagia\LaravelSignPad;
+namespace Jmitech\LaravelSignPad;
 
-use Creagia\LaravelSignPad\Commands\InstallCommand;
-use Creagia\LaravelSignPad\Components\SignaturePad;
+use Jmitech\LaravelSignPad\Commands\InstallCommand;
+use Jmitech\LaravelSignPad\Components\SignaturePad;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

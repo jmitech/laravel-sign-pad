@@ -1,6 +1,6 @@
 <?php
 
-use Creagia\LaravelSignPad\Tests\Models\TestModel;
+use Jmitech\LaravelSignPad\Tests\Models\TestModel;
 use Illuminate\Http\Response;
 
 it('adds new methods to models', function () {

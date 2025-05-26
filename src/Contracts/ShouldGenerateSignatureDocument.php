@@ -1,8 +1,8 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Contracts;
+namespace Jmitech\LaravelSignPad\Contracts;
 
-use Creagia\LaravelSignPad\SignatureDocumentTemplate;
+use Jmitech\LaravelSignPad\SignatureDocumentTemplate;
 
 interface ShouldGenerateSignatureDocument
 {

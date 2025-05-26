@@ -1,9 +1,9 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Actions;
+namespace Jmitech\LaravelSignPad\Actions;
 
-use Creagia\LaravelSignPad\Signature;
-use Creagia\LaravelSignPad\SignatureDocumentTemplate;
+use Jmitech\LaravelSignPad\Signature;
+use Jmitech\LaravelSignPad\SignatureDocumentTemplate;
 use Illuminate\Support\Facades\Storage;
 use setasign\Fpdi\Tcpdf\Fpdi;
 

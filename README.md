@@ -3,9 +3,9 @@
 A Laravel package to sign documents and optionally generate
  [certified PDFs](https://www.prepressure.com/pdf/basics/certified-pdf#:~:text=A%20Certified%20PDF%20is%20a,errors%20or%20notifications%20were%20generated) associated to a Eloquent model.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/creagia/laravel-sign-pad.svg?style=flat-square)](https://packagist.org/packages/creagia/laravel-sign-pad)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/creagia/laravel-sign-pad/run-tests.yml?label=tests)](https://github.com/creagia/laravel-sign-pad/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/creagia/laravel-sign-pad.svg?style=flat-square)](https://packagist.org/packages/creagia/laravel-sign-pad)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/jmitech/laravel-sign-pad.svg?style=flat-square)](https://packagist.org/packages/jmitech/laravel-sign-pad)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jmitech/laravel-sign-pad/run-tests.yml?label=tests)](https://github.com/jmitech/laravel-sign-pad/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/jmitech/laravel-sign-pad.svg?style=flat-square)](https://packagist.org/packages/jmitech/laravel-sign-pad)
 
 ## Requirements
 
@@ -16,7 +16,7 @@ Laravel pad signature requires **PHP 8.0 - 8.4** and **Laravel 8 - 12**.
 You can install the package via composer:
 
 ```bash
-composer require creagia/laravel-sign-pad
+composer require jmitech/laravel-sign-pad
 ```
 
 Publish the config and the migration files and migrate the database
@@ -50,8 +50,8 @@ Add the `RequiresSignature` trait and implement the `CanBeSigned` class to the m
 
 namespace App\Models;
 
-use Creagia\LaravelSignPad\Concerns\RequiresSignature;
-use Creagia\LaravelSignPad\Contracts\CanBeSigned;
+use Jmitech\LaravelSignPad\Concerns\RequiresSignature;
+use Jmitech\LaravelSignPad\Contracts\CanBeSigned;
 
 class MyModel extends Model implements CanBeSigned
 {
@@ -69,13 +69,13 @@ If you want to generate PDF documents with the signature, you should implement t
 
 namespace App\Models;
 
-use Creagia\LaravelSignPad\Concerns\RequiresSignature;
-use Creagia\LaravelSignPad\Contracts\CanBeSigned;
-use Creagia\LaravelSignPad\Contracts\ShouldGenerateSignatureDocument;
-use Creagia\LaravelSignPad\Templates\BladeDocumentTemplate;
-use Creagia\LaravelSignPad\Templates\PdfDocumentTemplate;
-use Creagia\LaravelSignPad\SignatureDocumentTemplate;
-use Creagia\LaravelSignPad\SignaturePosition;
+use Jmitech\LaravelSignPad\Concerns\RequiresSignature;
+use Jmitech\LaravelSignPad\Contracts\CanBeSigned;
+use Jmitech\LaravelSignPad\Contracts\ShouldGenerateSignatureDocument;
+use Jmitech\LaravelSignPad\Templates\BladeDocumentTemplate;
+use Jmitech\LaravelSignPad\Templates\PdfDocumentTemplate;
+use Jmitech\LaravelSignPad\SignatureDocumentTemplate;
+use Jmitech\LaravelSignPad\SignaturePosition;
 
 class MyModel extends Model implements CanBeSigned, ShouldGenerateSignatureDocument
 {

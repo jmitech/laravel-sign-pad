@@ -1,8 +1,8 @@
 <?php
 
-namespace Creagia\LaravelSignPad;
+namespace Jmitech\LaravelSignPad;
 
-use Creagia\LaravelSignPad\Contracts\PdfElement;
+use Jmitech\LaravelSignPad\Contracts\PdfElement;
 
 class DateElement implements PdfElement
 {

@@ -29,18 +29,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Creagia\\LaravelSignPad\\": "src"
+            "Jmitech\\LaravelSignPad\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Creagia\\LaravelSignPad\\Tests\\": "tests"
+            "Jmitech\\LaravelSignPad\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Creagia\\LaravelSignPad\\LaravelSignPadServiceProvider"
+                "Jmitech\\LaravelSignPad\\LaravelSignPadServiceProvider"
             ]
         }
     },

@@ -1,8 +1,8 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Templates;
+namespace Jmitech\LaravelSignPad\Templates;
 
-use Creagia\LaravelSignPad\Signature;
+use Jmitech\LaravelSignPad\Signature;
 use setasign\Fpdi\Tcpdf\Fpdi;
 
 class BladeDocumentTemplate extends DocumentTemplate

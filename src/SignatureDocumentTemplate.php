@@ -1,8 +1,8 @@
 <?php
 
-namespace Creagia\LaravelSignPad;
+namespace Jmitech\LaravelSignPad;
 
-use Creagia\LaravelSignPad\Templates\DocumentTemplate;
+use Jmitech\LaravelSignPad\Templates\DocumentTemplate;
 
 class SignatureDocumentTemplate
 {

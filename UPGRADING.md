@@ -24,8 +24,8 @@
 ```
 - Change the `SignatureDocumentTemplate` parameters to the new multiple signature positions array. For example replace:
 ```php
-use Creagia\LaravelSignPad\SignatureDocumentTemplate;
-use Creagia\LaravelSignPad\Templates\PdfDocumentTemplate;
+use Jmitech\LaravelSignPad\SignatureDocumentTemplate;
+use Jmitech\LaravelSignPad\Templates\PdfDocumentTemplate;
 
 public function getSignatureDocumentTemplate(): SignatureDocumentTemplate
 {
@@ -40,9 +40,9 @@ public function getSignatureDocumentTemplate(): SignatureDocumentTemplate
 ```
 With:
 ```php
-use Creagia\LaravelSignPad\Templates\PdfDocumentTemplate;
-use Creagia\LaravelSignPad\SignatureDocumentTemplate;
-use Creagia\LaravelSignPad\SignaturePosition;
+use Jmitech\LaravelSignPad\Templates\PdfDocumentTemplate;
+use Jmitech\LaravelSignPad\SignatureDocumentTemplate;
+use Jmitech\LaravelSignPad\SignaturePosition;
 
 public function getSignatureDocumentTemplate(): SignatureDocumentTemplate
 {

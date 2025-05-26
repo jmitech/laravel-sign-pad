@@ -1,8 +1,8 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Actions;
+namespace Jmitech\LaravelSignPad\Actions;
 
-use Creagia\LaravelSignPad\Exceptions\InvalidConfiguration;
+use Jmitech\LaravelSignPad\Exceptions\InvalidConfiguration;
 use Exception;
 use Illuminate\Support\Facades\File;
 use setasign\Fpdi\Tcpdf\Fpdi;

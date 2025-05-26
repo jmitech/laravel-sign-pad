@@ -1,11 +1,11 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Controllers;
+namespace Jmitech\LaravelSignPad\Controllers;
 
-use Creagia\LaravelSignPad\Actions\GenerateSignatureDocumentAction;
-use Creagia\LaravelSignPad\Contracts\CanBeSigned;
-use Creagia\LaravelSignPad\Contracts\ShouldGenerateSignatureDocument;
-use Creagia\LaravelSignPad\Exceptions\ModelHasAlreadyBeenSigned;
+use Jmitech\LaravelSignPad\Actions\GenerateSignatureDocumentAction;
+use Jmitech\LaravelSignPad\Contracts\CanBeSigned;
+use Jmitech\LaravelSignPad\Contracts\ShouldGenerateSignatureDocument;
+use Jmitech\LaravelSignPad\Exceptions\ModelHasAlreadyBeenSigned;
 use Exception;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;

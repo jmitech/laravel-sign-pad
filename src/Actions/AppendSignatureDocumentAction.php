@@ -1,10 +1,10 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Actions;
+namespace Jmitech\LaravelSignPad\Actions;
 
 use App\Models\SignatureTemplate;
-use Creagia\LaravelSignPad\Exceptions\InvalidConfiguration;
-use Creagia\LaravelSignPad\SignatureDocumentTemplate;
+use Jmitech\LaravelSignPad\Exceptions\InvalidConfiguration;
+use Jmitech\LaravelSignPad\SignatureDocumentTemplate;
 use Exception;
 use setasign\Fpdi\Tcpdf\Fpdi;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Creagia\LaravelSignPad\Contracts;
+namespace Jmitech\LaravelSignPad\Contracts;
 
 interface CanBeSigned
 {
