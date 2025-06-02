@@ -13,6 +13,9 @@ A Laravel package to sign documents and optionally generate
 
 Laravel pad signature requires **PHP 8.0 - 8.4** and **Laravel 8 - 12**.
 
+- Spatie\MediaLibrary
+- Spatie\Permissions
+
 ## Installation
 
 You can install the package via composer:

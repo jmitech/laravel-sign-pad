@@ -53,4 +53,21 @@ return [
      * More information: https://hooks.wbcomdesigns.com/reference/classes/tcpdf/setsignature/#parameters
      */
     'cert_type' => 2,
+
+    /**
+     * The policy class for SignatureTemplate.
+     * This is used to define the authorization logic for signature templates.
+     */
+    'signature_template_policy' => \Jmitech\LaravelSignPad\Policies\SignatureTemplatePolicy::class,
+
+    /**
+     * The policy class for SignatureRequirement.
+     * This is used to define the authorization logic for signature requirements.
+     */
+    'signature_requirement_policy' => \Jmitech\LaravelSignPad\Policies\SignatureRequirementPolicy::class,
+    /**
+     * The policy class for Signature.
+     * This is used to define the authorization logic for signatures.
+     */
+    'signature_policy' => \Jmitech\LaravelSignPad\Policies\SignaturePolicy::class,
 ];

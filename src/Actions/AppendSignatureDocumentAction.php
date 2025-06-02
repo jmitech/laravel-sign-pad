@@ -2,7 +2,7 @@
 
 namespace Jmitech\LaravelSignPad\Actions;
 
-use App\Models\SignatureTemplate;
+use Jmitech\LaravelSignPad\SignatureTemplate;
 use Jmitech\LaravelSignPad\Exceptions\InvalidConfiguration;
 use Jmitech\LaravelSignPad\SignatureDocumentTemplate;
 use Exception;
