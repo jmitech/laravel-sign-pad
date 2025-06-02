@@ -4,7 +4,7 @@ namespace Jmitech\LaravelSignPad\Livewire\Forms;
 
 use Livewire\Form;
 use Jmitech\LaravelSignPad\SignatureTemplate;
-use App\Models\Validators\ValidatesSignatureTemplate;
+use Jmitech\LaravelPadSign\Validators\ValidatesSignatureTemplate;
 use Jmitech\LaravelPadSign\Actions\SignatureTemplates\StoreSignatureTemplateAction;
 use Jmitech\LaravelPadSign\Actions\SignatureTemplates\UpdateSignatureTemplateAction;
 

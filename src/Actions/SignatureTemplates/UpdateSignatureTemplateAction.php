@@ -4,7 +4,7 @@ namespace Jmitech\LaravelPadSign\Actions\SignatureTemplates;
 
 use Illuminate\Support\Facades\Gate;
 use Jmitech\LaravelSignPad\SignatureTemplate;
-use App\Models\Validators\ValidatesSignatureTemplate;
+use Jmitech\LaravelPadSign\Validators\ValidatesSignatureTemplate;
 
 class UpdateSignatureTemplateAction
 {
